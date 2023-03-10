@@ -133,58 +133,87 @@ Recovery / YAML to JSON / Deleted Local storage.... Oups ! (if you have exported
 
 Try to have rooms: ... then roomplans: ... , for roomplans, have y1, x1, y2, x2 in that order. rooms: names should match the roomplans: names (because the app need to put a device in a room and the mathcing is done with the name)
 ```
-rooms:
-    kitchen: [0.035, 2.285, 0]
-    bedroom: [3.68, 11.045, 1.2]
-    livingroom: [3.59, 5.805, 1.2]
-    second_bedroom: [7.275, 5.559928991794586, 0]
-    office: [10.48, 2.715, 0]
-roomplans:
-    - name: kitchen
-        y1: 0
-        x1: 0
-        y2: 4.29
-        x2: 3.59
-    - name: bathroom
-        y1: 4.29
-        x1: 0
-        y2: 6.72
-        x2: 2.36
-    - name: toilet
-        y1: 6.72
-        x1: 0
-        y2: 7.98
-        x2: 2.36
-    - name: second_bedroom
-        y1: 7.98
-        x1: 0
-        y2: 12.06
-        x2: 3.68
-    - name: bedroom
-        y1: 7.98
-        x1: 3.68
-        y2: 12.06
-        x2: 7.6
-    - name: entrance
-        y1: 4.29
-        x1: 2.36
-        y2: 7.98
-        x2: 3.59
-    - name: entrance
-        y1: 6.2
-        x1: 3.59
-        y2: 7.98
-        x2: 7.6
-    - name: livingroom
-        y1: 1.37
-        x1: 3.59
-        y2: 6.2
-        x2: 7.6
-    - name: office
-        y1: 0
-        x1: 7.6
-        y2: 4.92
-        x2: 10.53
+rooms: 
+	- name: Master Bath
+		points:
+			 - [ 0, 11]
+			 - [ 2, 11]
+			 - [ 2, 14]
+			 - [ 0, 14]
+			 - [ 0, 11]
+	- name: Master Closet
+		points:
+			 - [ 2, 11]
+			 - [ 3, 11]
+			 - [ 3, 14]
+			 - [ 2, 14]
+			 - [ 2, 11]
+	- name: Guest Bath
+		points:
+			 - [ 3, 11]
+			 - [ 5, 11]
+			 - [ 5, 14]
+			 - [ 3, 14]
+			 - [ 3, 11]
+	- name: Office
+		points:
+			 - [ 5, 11]
+			 - [ 10, 11]
+			 - [ 10, 14]
+			 - [ 5, 14]
+			 - [ 5, 11]
+	- name: Bed room
+		points:
+			 - [ 0, 8]
+			 - [ 5, 8]
+			 - [ 5, 11]
+			 - [ 0, 11]
+			 - [ 0, 8]
+	- name: Hall
+		points:
+			 - [ 5, 8]
+			 - [ 6, 8]
+			 - [ 6, 11]
+			 - [ 5, 11]
+			 - [ 5, 8]
+	- name: living room
+		points:
+			 - [ 0, 3]
+			 - [ 10, 3]
+			 - [ 10, 8]
+			 - [ 0, 8]
+			 - [ 0, 3]
+	- name: dinning room
+		points:
+			 - [ 0, 0]
+			 - [ 4, 0]
+			 - [ 4, 3]
+			 - [ 0, 3]
+			 - [ 0, 0]
+	- name: kitchen
+		points:
+			 - [ 4, 0]
+			 - [ 10, 0]
+			 - [ 10, 3]
+			 - [ 4, 3]
+			 - [ 4, 0]
+nodes: 
+	- name: office
+	point: [9,14.00,14, 0]
+	floors: ["first"]
+	- name: bedroom
+	point: [1,9.11,9, 0]
+	floors: ["first"]
+	- name: hall
+	point: [5,9.74,10, 0]
+	floors: ["first"]
+	- name: livingroom
+	point: [9,4.42,4, 0]
+	floors: ["first"]
+	- name: kitchen
+	point: [8,0.19,0, 0]
+	floors: ["first"]
+
 ```
 
 ## A little glimps (Outdated but I can't take new ones currently - Check demo to see new desing and features)
