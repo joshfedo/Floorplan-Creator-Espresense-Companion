@@ -474,7 +474,7 @@ function objToYaml(obj) {
             var x = currentUnit == "m" ? Math.abs(probe.x - firstCoordinateOffsetX) : Math.abs(probe.x - firstCoordinateOffsetX)/3.2808;
             var y =  currentUnit == "m" ? Math.abs(probe.y - firstCoordinateOffsetY) : Math.abs(probe.y - firstCoordinateOffsetY)/3.2808;
             string += "\t- name: " + probe.name +"\n";
-            string += "\tpoint: [" + + Math.round(x  / 100) + "," + (y / 100) + "," + Math.round(y  / 100) + ", 0]\n";
+            string += "\tpoint: [" + Math.round(x  / 100) + "," + Math.round(y / 100) + ", 0]\n";
             string += "\tfloors: [\"first\"]\n";
         });
     });
